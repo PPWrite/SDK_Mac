@@ -84,15 +84,15 @@
 - (void)getDeviceState:(DeviceState)State
 {
     switch (State) {
-        case CONNECT_FAIL:{
+        case DEVICE_CONNECT_FAIL:{
             NSLog(@"设备连接失败");
             break;
         }
-        case CONNECTED:{
+        case DEVICE_CONNECTE_SUCCESS:{
             NSLog(@"设备连接成功");
             break;
         }
-        case DISCONNECTED:{
+        case DEVICE_DISCONNECTED:{
             NSLog(@"设备断开");
             CurDevice = nil;
             self.deviceName.stringValue = [NSString stringWithFormat:@"%@",CurDevice.deviceName];

@@ -204,6 +204,11 @@
 - (void)startSyncNote;
 
 /**
+ 根据密码开始同步笔记
+ */
+- (void)startSyncNoteWithPassWord:(NSString *)password;
+
+/**
  停止同步笔记
  */
 -(void)stopSyncNote;
@@ -384,11 +389,45 @@
 #pragma mark ---------------------------Other---------------------------
 
 /**
+ 设置连接设备型号
+ 
+ @param deviceType <#deviceType description#>
+ */
+- (void)setDeviceType:(DeviceType)deviceType;
+
+/**
  获取当前的系统服务状态
  
  @return <#return value description#>
  */
 - (OSDeviceStateType)getOSDeviceState;
+
+/**
+ 设置新的同步密码
+ 
+ @param oldPassWord 旧密码
+ @param newPassword 新密码
+ */
+- (void)setSyncPassWordWithOldPassWord:(NSString *)oldPassWord NewPassWord:(NSString *)newPassword;
+
+/**
+ 开启数据上报
+ */
+- (void)OpneReportedData;
+
+/**
+ 关闭数据上报
+ */
+- (void)CloseReportedData;
+
+
+/**
+ 擦除数据
+ 
+ @param type 操作类型
+ */
+- (void)CleanDeviceDataWithType:(CleanDataType)type;
+
 #pragma mark ---------------------------内部专用---------------------------
 
 /**
