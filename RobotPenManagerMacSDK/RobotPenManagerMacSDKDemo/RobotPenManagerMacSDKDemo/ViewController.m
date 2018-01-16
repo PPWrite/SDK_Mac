@@ -18,7 +18,6 @@
 @property (weak) IBOutlet NSTextField *battery;     // 电量
 @property (weak) IBOutlet NSTextField *SWstr;       // 硬件号
 @property (weak) IBOutlet NSTextField *deviceType;  //设备类型
-@property (weak) IBOutlet NSButton *calibationBtn;  //校准
 
 @property (strong , nonatomic) WhiteBoardController *wbController;
 @end
@@ -110,28 +109,7 @@
             self.battery.stringValue = [NSString stringWithFormat:@"%d",CurDevice.Battery];
             break;
         }
-        case DEVICE_CALIBRATION_SUPPORT:{
-            self.calibationBtn.hidden = NO;
-            NSLog(@"支持校准功能");
-            break;
-        }
-        case DEVICE_CALIBRATION_NONSUPPORT:{
-            self.calibationBtn.hidden = YES;
-            NSLog(@"不支持校准功能");
-            break;
-        }
-        case DEVICE_CALIBRATION_REDAY:{
-            NSLog(@"进入频率校准模式");
-            break;
-        }
-        case DEVICE_CALIBRATION_SUCCESS:{
-            NSLog(@"校准成功");
-            break;
-        }
-        case DEVICE_CALIBRATION_FAIL:{
-            NSLog(@"校准失败");
-            break;
-        }
+        
         default:
             break;
     }
@@ -195,15 +173,6 @@
     
 }
 
-/**
- 校准
-
- @param sender <#sender description#>
- */
-- (IBAction)calibrtionaAction:(id)sender {
-     [[RobotPenManager sharePenManager] startCalibration];
-    
-}
 
 
 - (void)setRepresentedObject:(id)representedObject {

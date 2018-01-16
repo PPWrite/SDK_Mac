@@ -1,4 +1,69 @@
+/************************************1.0.4**************************************/
+MAC SDK 1.0.4已更新
+地址：https://github.com/PPWrite/SDK_Mac
+版本号在RobotPenHeader头可见 或 调用getSDKVersion方法可在控制台打印。
+更新内容详情见“更新概要”
 
+
+更新概要：
+1、增加新固件支持。
+2、新增方法。
+3、修改方法名。
+
+一、增加项：
+1）、RobotPenHeader.h 中添加了
+/**获取、设置设备休眠时间成功（T9B、T8C系列）*/
+    DEVICE_DORMANTTIME_SUCCESS = 35,
+/**获取、设置设备休眠时间成功（T8C系列）*/
+    DEVICE_SIZE_SUCCESS = 37,
+
+2）、RobotPenDelegate.h中
+/*!
+ @method
+ @abstract 获取设备休眠时间
+ @discussion T9B/T8C系列专用
+ @param time 设备休眠时间 0-65535min
+ */
+- (void)getDeviceDormantTime:(int)time;
+
+/*!
+ @method
+ @abstract 获取设备尺寸
+ @discussion T8C系列专用
+ @param size 设备尺寸
+ */
+- (void)getDeviceSize:(CGSize)size;
+
+3）、RobotPenDevice.h
+
+/*!
+ @method
+ @abstract 根据方向获取屏幕方向获取设备原始宽高
+ @param isHorizontal 设备方向
+ @result 返回结果
+ */
+- (CGSize)getDeviceSizeWithIsHorizontal:(BOOL)isHorizontal;
+
+4）、RobotPenManager.h
+/*!
+ @method
+ @abstract 检查是否是已配对过的设备
+ @param device 设备
+ @result 返回结果
+ */
+- (BOOL)getIsPairedWithDevice:(RobotPenDevice *)device;
+
+/*!
+ @method
+ @abstract 开启搜索T7B_HF 默认关闭
+ @discussion T7B_HF 使用
+ */
+- (void)openT7B:(BOOL)open;
+
+二、修改项：
+1）、T9相关的方法名中的TA全部替换成OEM
+
+/************************************1.0.4**************************************/
 /************************************1.0.3**************************************/
 MAC SDK 1.0.3已更新
 地址：https://github.com/PPWrite/SDK_Mac
@@ -14,14 +79,15 @@ MAC SDK 1.0.3已更新
 
 RobotPenHeader.h 中
 /**正在连接*/
-   CONNECTING -> DEVICE_CONNECTING,
+    CONNECTING -> DEVICE_CONNECTING,
     /**连接成功*/
      CONNECTED-> DEVICE_CONNECTE_SUCCESS,
     /**连接错误*/
      CONNECT_FAIL-> DEVICE_CONNECT_FAIL,
     /**已断开*/
     DISCONNECTED -> DEVICE_DISCONNECTED,
-
+    /**服务准备完成*/
+   SERVICES_READY->DEVICE_SERVICES_READY
     /**笔初始化完成*/
      PEN_INIT_COMPLETE-> DEVICE_INIT_COMPLETE,
 增加项：
