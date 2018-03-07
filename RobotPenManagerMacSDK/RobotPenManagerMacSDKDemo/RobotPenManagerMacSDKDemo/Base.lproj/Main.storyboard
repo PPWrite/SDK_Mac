@@ -815,18 +815,18 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7eT-CI-abx">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7eT-CI-abx">
                                 <rect key="frame" x="330" y="221" width="94" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5t8-RZ-X5i"/>
                                     <constraint firstAttribute="width" constant="82" id="rX6-kw-dRG"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cwi-Fl-7vS">
+                                <buttonCell key="cell" type="push" title="搜索(ble用)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cwi-Fl-7vS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="calibrtionaAction:" target="XfG-lQ-9wD" id="ilD-xt-SbF"/>
+                                    <action selector="scanUSB:" target="XfG-lQ-9wD" id="oJe-jl-BgS"/>
                                 </connections>
                             </button>
                         </subviews>

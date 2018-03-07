@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <RobotPenManagerMacSDK/RobotPenManager.h>
+#import <RobotMacPenSDK/RobotPenManager.h>
 #import "WhiteBoardController.h"
 @interface ViewController ()<RobotPenDelegate>
 {
@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     //设置SDK类型
-    [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
+    [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
     
     //遵守协议
     [[RobotPenManager sharePenManager] setPenDelegate:self];
@@ -36,7 +36,7 @@
     [[RobotPenManager sharePenManager] setOrigina:NO optimize:YES transform:NO];
     
     //SDK方法 设置场景尺寸，isOriginal = NO时必须设置
-    [[RobotPenManager sharePenManager] setSceneSizeWithWidth:VALUE_A4_HEIGHT andHeight:VALUE_A4_WIDTH andIsHorizontal:NO];
+    [[RobotPenManager sharePenManager] setSceneSizeWithWidth:VALUE_A5_HEIGHT andHeight:VALUE_A5_WIDTH andIsHorizontal:NO];
     
     //SDK方法 设置笔迹宽度，isOptimize = YES时必须设置，即显示宽度
     [[RobotPenManager sharePenManager] setStrokeWidth:1.2];
@@ -116,7 +116,6 @@
 
 }
 
-
 /**
  发现电磁板设备
 
@@ -124,6 +123,7 @@
  */
 - (void)getBufferDevice:(RobotPenDevice *)device
 {
+     NSLog(@"device = %@",device);
     if (device.model == 1) {//usb模型
         
         if (device.MacSign == 1) {// MacSign = 1表示插入 0 表示拔出
@@ -134,8 +134,12 @@
             theLastDevice = nil;
         }
         
+    }else//ble模式
+    {
+        //可做设备列表，此处只做演示用
+        theLastDevice = device;
     }
-    
+
 }
 
 
@@ -173,7 +177,14 @@
     
 }
 
-
+/**
+ 搜索设备（BLE专用）
+ 
+ @param sender button
+ */
+- (IBAction)scanUSB:(id)sender {
+    [[RobotPenManager sharePenManager] scanDeviceWithALL:NO];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];

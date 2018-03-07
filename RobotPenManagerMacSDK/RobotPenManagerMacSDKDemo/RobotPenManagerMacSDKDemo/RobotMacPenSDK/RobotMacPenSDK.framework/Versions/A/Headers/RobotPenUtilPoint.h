@@ -69,6 +69,14 @@
 
 /*!
  @method
+ @abstract 获取转换点坐标(以原始点为基础)
+ @param type 坐标系原点位置
+ @result 返回结果
+ */
+- (CGPoint)getTransformsPointWithType:(RobotPenCoordinateSystem)type;
+
+/*!
+ @method
  @abstract 转换mac Y坐标
  @param isHorizontal 是否是横屏
  @result 返回结果

@@ -57,6 +57,14 @@
 
 /*!
  @method
+ @abstract 获取转换点坐标(以原始点为基础)
+ @param type 坐标系原点位置
+ @result 返回结果
+ */
+- (CGPoint)getTransformsPointWithType:(RobotPenCoordinateSystem)type;
+
+/*!
+ @method
  @abstract 转换MAC坐标系的Y坐标
  @discussion MAC方法
  @param isHorizontal NO:电磁板左上角为(0,0)点,YES:电磁板左下角为(0,0)点

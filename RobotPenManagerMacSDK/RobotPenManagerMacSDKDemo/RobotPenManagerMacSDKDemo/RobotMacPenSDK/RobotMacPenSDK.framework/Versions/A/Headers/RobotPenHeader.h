@@ -1,7 +1,7 @@
 
 /*********************************************************/
 /*********************************************************/
-/*----------------------SDK 1.0.4------------------------*/
+/*----------------------SDK 1.0.5------------------------*/
 /*********************************************************/
 /*********************************************************/
 #ifdef DEBUG
@@ -23,6 +23,9 @@
 /** 蓝牙系统提示框*/
 #define ShowBLEAlert NO
 
+/** 最大设备号*/
+#define DeviceNumber_MAX 38
+
 //注意：必看！！！
 //此处的宽高为板子横向的宽高。
 //即
@@ -36,7 +39,7 @@
 /** 标准A4设备纵向 高度**/
 #define VALUE_A4_HEIGHT 16650.0f
 
-//对应设备：P7/T7/T7E/T7_TS/T7_LW/T7_CY/C7/S7_JD/T7A/T7_HI/S7_SD 硬件号 1/2/15/16/17/22/24/26/28/29/36
+//对应设备：P7/T7/T7E_TS/T7_TS/T7_LW/T7_CY/C7/S7_JD/T7A/T7_HI/S7_SD/T7E/T7E_HFHH 硬件号 1/2/15/16/17/22/24/26/28/29/36/37/38
 /** 标准A5设备纵向 纵向 宽度**/
 #define VALUE_A5_WIDTH  14335.0f
 /** 标准A5设备纵向 高度**/
@@ -108,7 +111,7 @@ typedef enum {
     
     T7PL = 14,
     
-    T7E = 15,
+    T7E_TS = 15,
     
     T7_TS = 16,
     
@@ -151,6 +154,10 @@ typedef enum {
     T8C = 35,
     
     S7_SD = 36,
+    
+    T7E = 37,
+    
+    T7E_HFHH = 38,
     
 } DeviceType;
 
@@ -251,6 +258,26 @@ typedef enum {
     DEVICE_CLEANDATA_NOTAUTHORIZED,
     
 }DeviceState;
+
+/*!
+ @enum
+ @abstract 系统状态
+ */
+typedef enum{
+    /** 默认主线程*/
+    BLEQueueType_Main = 0,
+    /** 全局高优先级队列*/
+    BLEQueueType_High,
+    /** 全局中优先级队列*/
+    BLEQueueType_Default,
+    /** 全局低优先级队列*/
+    BLEQueueType_Low,
+    /** 全局后台队列*/
+    BLEQueueType_Background,
+    /** 自定义队列*/
+    BLEQueueType_User,
+    
+}BLEQueueType;
 
 /*!
  @enum
@@ -436,6 +463,24 @@ typedef enum {
     RobotPenPointAssistFloat    /** 侧键按下悬浮状态 **/
     
 }RobotPenPointTouchStatus;
+
+/*!
+ @enum
+ @abstract 坐标原始点的位置
+ */
+typedef enum {
+    
+    RobotPenCoordinateDefault = 0,     /** 设备默认坐标系点**/
+    
+    RobotPenCoordinateUpperLeft,    /** 左上角为坐标原点 **/
+    
+    RobotPenCoordinateLowerLeft,     /** 左下角为坐标原点 **/
+    
+    RobotPenCoordinateUpperRight,      /** 右上角为坐标原点 **/
+    
+    RobotPenCoordinateLowerRight,         /** 右下角为坐标原点 **/
+    
+}RobotPenCoordinateSystem;
 
 /*!
  @enum

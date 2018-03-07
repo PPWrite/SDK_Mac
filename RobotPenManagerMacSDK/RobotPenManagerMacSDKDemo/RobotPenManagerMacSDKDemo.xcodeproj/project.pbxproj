@@ -16,8 +16,8 @@
 		C00FDED31F260D2500AEBEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FDED21F260D2500AEBEFB /* ViewController.m */; };
 		C00FDED51F260D2500AEBEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00FDED41F260D2500AEBEFB /* Assets.xcassets */; };
 		C00FDED81F260D2500AEBEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00FDED61F260D2500AEBEFB /* Main.storyboard */; };
+		C0281ED520501AA5007A0152 /* RobotMacPenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0281ED420501AA5007A0152 /* RobotMacPenSDK.framework */; };
 		C09116F31F5508B700710320 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09116F21F5508B700710320 /* libsqlite3.0.tbd */; };
-		C0FEB0861F6910A20022FA82 /* RobotPenManagerMacSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FEB0851F6910A20022FA82 /* RobotPenManagerMacSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		C00FDED41F260D2500AEBEFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C00FDED71F260D2500AEBEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C00FDED91F260D2500AEBEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0281ED420501AA5007A0152 /* RobotMacPenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RobotMacPenSDK.framework; sourceTree = "<group>"; };
 		C09116F21F5508B700710320 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		C0FEB0851F6910A20022FA82 /* RobotPenManagerMacSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RobotPenManagerMacSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FEB0861F6910A20022FA82 /* RobotPenManagerMacSDK.framework in Frameworks */,
+				C0281ED520501AA5007A0152 /* RobotMacPenSDK.framework in Frameworks */,
 				C09116F31F5508B700710320 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,14 +60,6 @@
 				7D04796E1F2B3BE500841915 /* pen.png */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		7D384AA31F67D1DD0063E2D6 /* RobotPenManager */ = {
-			isa = PBXGroup;
-			children = (
-				C0FEB0851F6910A20022FA82 /* RobotPenManagerMacSDK.framework */,
-			);
-			path = RobotPenManager;
 			sourceTree = "<group>";
 		};
 		C00FDEBF1F260D2500AEBEFB = {
@@ -90,8 +82,8 @@
 		C00FDECA1F260D2500AEBEFB /* RobotPenManagerMacSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C0281ED320501AA5007A0152 /* RobotMacPenSDK */,
 				7D0479661F2ADE6900841915 /* RobotPenManagerMacSDKDemo.entitlements */,
-				7D384AA31F67D1DD0063E2D6 /* RobotPenManager */,
 				C00FDECB1F260D2500AEBEFB /* AppDelegate.h */,
 				C00FDECC1F260D2500AEBEFB /* AppDelegate.m */,
 				C00FDED11F260D2500AEBEFB /* ViewController.h */,
@@ -116,6 +108,14 @@
 				C00FDECF1F260D2500AEBEFB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0281ED320501AA5007A0152 /* RobotMacPenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C0281ED420501AA5007A0152 /* RobotMacPenSDK.framework */,
+			);
+			path = RobotMacPenSDK;
 			sourceTree = "<group>";
 		};
 		C09116F11F5508B700710320 /* Frameworks */ = {
@@ -325,6 +325,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
+					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotMacPenSDK",
 				);
 				INFOPLIST_FILE = RobotPenManagerMacSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -348,6 +349,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
+					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotMacPenSDK",
 				);
 				INFOPLIST_FILE = RobotPenManagerMacSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

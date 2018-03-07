@@ -31,7 +31,7 @@
 #pragma mark ------ConfigUI------
 - (void)ConfigUI
 {
-    NSRect rect = NSMakeRect(0, 0, VALUE_A4_HEIGHT*kratio , VALUE_A4_WIDTH*kratio);
+    NSRect rect = NSMakeRect(0, 0, VALUE_A5_HEIGHT*kratio , VALUE_A4_WIDTH*kratio);
     self.drawView = [[DrawBoradView alloc] initWithFrame:rect];
  
     [self.bgView addSubview:self.drawView];

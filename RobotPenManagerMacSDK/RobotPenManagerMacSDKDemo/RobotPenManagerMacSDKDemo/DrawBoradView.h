@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <RobotPenManagerMacSDK/RobotPenManager.h>
+#import <RobotMacPenSDK/RobotPenManager.h>
 
 @interface DrawBoradView : NSView
 

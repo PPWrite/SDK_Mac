@@ -108,8 +108,9 @@
 /*!
  @method
  @abstract  扫描设备
+ @param scanAll 是否搜索全部（未连接）设备，默认为NO(只搜索可配对与可连接状态);
  */
-- (void)scanDevice;
+- (void)scanDeviceWithALL:(BOOL)scanAll;
 
 /*!
  @method
@@ -160,18 +161,51 @@
 
 
 /*!
- @method 是否打开搜索设备实时更新
- @abstract  默认关闭
- @param open <#open description#>
+ @method 是否打开实时搜索设备
+ @abstract  开启后蓝牙不会过滤相同的设备信号，默认关闭
+ @discussion 蓝牙（BLE）专用
+ @param open 是否开启
+ @param search 是否开始搜索设备
+ */
+- (void)setOpenSearchRealTime:(BOOL)open startSearch:(BOOL)search;
+
+/*!
+ @method 是否打开实时获取打开搜索到设备的RSSI
+ @abstract  打开后实时上报搜索到的设备的RSSI，默认关闭
+ @discussion 需要打开setOpenSearchRealTime设置。
+ @discussion 蓝牙（BLE）专用
+ @param open 是否开启
+ */
+- (void)setOpenReadRealTimeRSSI:(BOOL)open;
+
+/*!
+ @method 打开周期更新设备列表
+ @abstract  打开周期更新设备列表，默认关闭
+ @discussion 打开后可根据setOpenInspectDeviceList方法设置的时间周期上报已断开的设备信息.
+ 当setOpenSearchRealTime开启后此方法无效。
+ @discussion 蓝牙（BLE）专用
+ @param open 是否开启
  */
 - (void)setOpenInspectDeviceList:(BOOL)open;
 
 /*!
- @method 设置搜索设备更新时间周期
- @abstract  默认为5s
+ @method 设置设备列表更新的时间周期
+ @abstract  设置上报断开设备的周期，默认为60s
+ @discussion 蓝牙（BLE）专用
  @param timePeriod 时间周期，单位为秒
  */
 - (void)setInspectDeviceListTimePeriod:(float)timePeriod;
+
+/*!
+ @method 设置上报无效设备延迟时间
+ @abstract  设置上报无效设备延迟时间，默认为5s
+ @discussion 每一秒大约检测15台设备，可根据场景设备数量适当调整，5s（大约65台设备）。
+ 此方法适用于setOpenSearchRealTime和setOpenInspectDeviceList开启
+ 设备数量/15 <= delayTime < timePeriod
+ @discussion 蓝牙（BLE）专用
+ @param delayTime 时间周期，单位为秒
+ */
+- (void)setReportInvalidDeviceDelayTime:(float)delayTime;
 
 /*!
  @method
@@ -514,6 +548,15 @@
  */
 - (void)resetDeviceSleepTime;
 #pragma mark ---------------------------Other---------------------------
+
+/*!
+ @method 设置蓝牙线程
+ @abstract 用于设置蓝牙线程,默认主线程
+ @discussion 蓝牙（BLE）专用
+ @param queueType 设备类型
+ @param queue 用户自定义线程 queueType =  BLEQueueType_User时必填，否则可为nil
+ */
+- (void)setBLEQueueType:(BLEQueueType)queueType queue:(nullable dispatch_queue_t)queue;
 
 /*!
  @method 设置默认连接设备型号
