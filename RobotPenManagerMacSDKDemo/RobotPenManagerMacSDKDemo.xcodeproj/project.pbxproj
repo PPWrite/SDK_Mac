@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D54F22A1F5657B600DE6FCC /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D54F21F1F5657B600DE6FCC /* pen.png */; };
+		7D54F22B1F5657B600DE6FCC /* RPInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D54F2271F5657B600DE6FCC /* RPInformationController.m */; };
+		7D54F2341F56658F00DE6FCC /* RPTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D54F2331F56658F00DE6FCC /* RPTableCell.m */; };
+		7D54F2401F56928700DE6FCC /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D54F23F1F56928700DE6FCC /* WindowController.m */; };
+		7D54F2491F56AB0600DE6FCC /* DrawBoradView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D54F2481F56AB0600DE6FCC /* DrawBoradView.m */; };
+		7DD4009E1F581F93009E1526 /* WhiteBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD4009C1F581F93009E1526 /* WhiteBoardController.m */; };
+		7DD4009F1F581F93009E1526 /* WhiteBoardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD4009D1F581F93009E1526 /* WhiteBoardController.xib */; };
+		7DE64E781F58FEE700329620 /* RPNoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE64E771F58FEE700329620 /* RPNoteManager.m */; };
+		C00FDECD1F260D2500AEBEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FDECC1F260D2500AEBEFB /* AppDelegate.m */; };
+		C00FDED01F260D2500AEBEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FDECF1F260D2500AEBEFB /* main.m */; };
+		C00FDED51F260D2500AEBEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00FDED41F260D2500AEBEFB /* Assets.xcassets */; };
+		C00FDED81F260D2500AEBEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00FDED61F260D2500AEBEFB /* Main.storyboard */; };
+		C09116F61F55090100710320 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09116F51F55090100710320 /* libsqlite3.0.tbd */; };
+		C0FB7C7F2091AEAF0000CF0C /* RobotMacPenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FB7C7E2091AEAF0000CF0C /* RobotMacPenSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D0479661F2ADE6900841915 /* RobotPenManagerMacSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RobotPenManagerMacSDKDemo.entitlements; sourceTree = "<group>"; };
+		7D54F21F1F5657B600DE6FCC /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
+		7D54F2261F5657B600DE6FCC /* RPInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPInformationController.h; sourceTree = "<group>"; };
+		7D54F2271F5657B600DE6FCC /* RPInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPInformationController.m; sourceTree = "<group>"; };
+		7D54F2321F56658F00DE6FCC /* RPTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPTableCell.h; sourceTree = "<group>"; };
+		7D54F2331F56658F00DE6FCC /* RPTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPTableCell.m; sourceTree = "<group>"; };
+		7D54F23E1F56928700DE6FCC /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		7D54F23F1F56928700DE6FCC /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+		7D54F2471F56AB0600DE6FCC /* DrawBoradView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBoradView.h; sourceTree = "<group>"; };
+		7D54F2481F56AB0600DE6FCC /* DrawBoradView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBoradView.m; sourceTree = "<group>"; };
+		7DD4009B1F581F93009E1526 /* WhiteBoardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteBoardController.h; sourceTree = "<group>"; };
+		7DD4009C1F581F93009E1526 /* WhiteBoardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteBoardController.m; sourceTree = "<group>"; };
+		7DD4009D1F581F93009E1526 /* WhiteBoardController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteBoardController.xib; sourceTree = "<group>"; };
+		7DE64E761F58FEE700329620 /* RPNoteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPNoteManager.h; sourceTree = "<group>"; };
+		7DE64E771F58FEE700329620 /* RPNoteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPNoteManager.m; sourceTree = "<group>"; };
+		C00FDEC81F260D2500AEBEFB /* RobotPenManagerMacSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotPenManagerMacSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00FDECB1F260D2500AEBEFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C00FDECC1F260D2500AEBEFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C00FDECF1F260D2500AEBEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C00FDED41F260D2500AEBEFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C00FDED71F260D2500AEBEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C00FDED91F260D2500AEBEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C09116F51F55090100710320 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C0FB7C7E2091AEAF0000CF0C /* RobotMacPenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RobotMacPenSDK.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C00FDEC51F260D2500AEBEFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FB7C7F2091AEAF0000CF0C /* RobotMacPenSDK.framework in Frameworks */,
+				C09116F61F55090100710320 /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D0479421F2ADE3E00841915 /* RobotPenManager */ = {
+			isa = PBXGroup;
+			children = (
+				C0FB7C7E2091AEAF0000CF0C /* RobotMacPenSDK.framework */,
+			);
+			path = RobotPenManager;
+			sourceTree = "<group>";
+		};
+		7D54F21D1F5657B600DE6FCC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F2241F5657B600DE6FCC /* 设备信息 */,
+				7D54F2201F5657B600DE6FCC /* 白板 */,
+				7D54F21E1F5657B600DE6FCC /* Resource */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7D54F21E1F5657B600DE6FCC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F21F1F5657B600DE6FCC /* pen.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7D54F2201F5657B600DE6FCC /* 白板 */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F2211F5657B600DE6FCC /* Controller */,
+				7D54F2231F5657B600DE6FCC /* View */,
+			);
+			path = "白板";
+			sourceTree = "<group>";
+		};
+		7D54F2211F5657B600DE6FCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DD4009B1F581F93009E1526 /* WhiteBoardController.h */,
+				7DD4009C1F581F93009E1526 /* WhiteBoardController.m */,
+				7DD4009D1F581F93009E1526 /* WhiteBoardController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D54F2231F5657B600DE6FCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F2471F56AB0600DE6FCC /* DrawBoradView.h */,
+				7D54F2481F56AB0600DE6FCC /* DrawBoradView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D54F2241F5657B600DE6FCC /* 设备信息 */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F2251F5657B600DE6FCC /* Controller */,
+				7D54F2281F5657B600DE6FCC /* Modal */,
+				7D54F2291F5657B600DE6FCC /* View */,
+			);
+			path = "设备信息";
+			sourceTree = "<group>";
+		};
+		7D54F2251F5657B600DE6FCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F2261F5657B600DE6FCC /* RPInformationController.h */,
+				7D54F2271F5657B600DE6FCC /* RPInformationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D54F2281F5657B600DE6FCC /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				7DE64E761F58FEE700329620 /* RPNoteManager.h */,
+				7DE64E771F58FEE700329620 /* RPNoteManager.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		7D54F2291F5657B600DE6FCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D54F2321F56658F00DE6FCC /* RPTableCell.h */,
+				7D54F2331F56658F00DE6FCC /* RPTableCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C00FDEBF1F260D2500AEBEFB = {
+			isa = PBXGroup;
+			children = (
+				C00FDECA1F260D2500AEBEFB /* RobotPenManagerMacSDKDemo */,
+				C00FDEC91F260D2500AEBEFB /* Products */,
+				C09116F41F55090100710320 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C00FDEC91F260D2500AEBEFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C00FDEC81F260D2500AEBEFB /* RobotPenManagerMacSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C00FDECA1F260D2500AEBEFB /* RobotPenManagerMacSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7D0479661F2ADE6900841915 /* RobotPenManagerMacSDKDemo.entitlements */,
+				7D0479421F2ADE3E00841915 /* RobotPenManager */,
+				C00FDECB1F260D2500AEBEFB /* AppDelegate.h */,
+				C00FDECC1F260D2500AEBEFB /* AppDelegate.m */,
+				7D54F23E1F56928700DE6FCC /* WindowController.h */,
+				7D54F23F1F56928700DE6FCC /* WindowController.m */,
+				7D54F21D1F5657B600DE6FCC /* Classes */,
+				C00FDED41F260D2500AEBEFB /* Assets.xcassets */,
+				C00FDED61F260D2500AEBEFB /* Main.storyboard */,
+				C00FDED91F260D2500AEBEFB /* Info.plist */,
+				C00FDECE1F260D2500AEBEFB /* Supporting Files */,
+			);
+			path = RobotPenManagerMacSDKDemo;
+			sourceTree = "<group>";
+		};
+		C00FDECE1F260D2500AEBEFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C00FDECF1F260D2500AEBEFB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C09116F41F55090100710320 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C09116F51F55090100710320 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C00FDEC71F260D2500AEBEFB /* RobotPenManagerMacSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00FDEDC1F260D2500AEBEFB /* Build configuration list for PBXNativeTarget "RobotPenManagerMacSDKDemo" */;
+			buildPhases = (
+				C00FDEC41F260D2500AEBEFB /* Sources */,
+				C00FDEC51F260D2500AEBEFB /* Frameworks */,
+				C00FDEC61F260D2500AEBEFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RobotPenManagerMacSDKDemo;
+			productName = RobotPenManagerMacSDKDemo;
+			productReference = C00FDEC81F260D2500AEBEFB /* RobotPenManagerMacSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C00FDEC01F260D2500AEBEFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = JMS;
+				TargetAttributes = {
+					C00FDEC71F260D2500AEBEFB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = DYC8577H8P;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C00FDEC31F260D2500AEBEFB /* Build configuration list for PBXProject "RobotPenManagerMacSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C00FDEBF1F260D2500AEBEFB;
+			productRefGroup = C00FDEC91F260D2500AEBEFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C00FDEC71F260D2500AEBEFB /* RobotPenManagerMacSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C00FDEC61F260D2500AEBEFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D54F22A1F5657B600DE6FCC /* pen.png in Resources */,
+				C00FDED51F260D2500AEBEFB /* Assets.xcassets in Resources */,
+				7DD4009F1F581F93009E1526 /* WhiteBoardController.xib in Resources */,
+				C00FDED81F260D2500AEBEFB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C00FDEC41F260D2500AEBEFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD4009E1F581F93009E1526 /* WhiteBoardController.m in Sources */,
+				7D54F22B1F5657B600DE6FCC /* RPInformationController.m in Sources */,
+				7D54F2401F56928700DE6FCC /* WindowController.m in Sources */,
+				7DE64E781F58FEE700329620 /* RPNoteManager.m in Sources */,
+				C00FDED01F260D2500AEBEFB /* main.m in Sources */,
+				7D54F2341F56658F00DE6FCC /* RPTableCell.m in Sources */,
+				7D54F2491F56AB0600DE6FCC /* DrawBoradView.m in Sources */,
+				C00FDECD1F260D2500AEBEFB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C00FDED61F260D2500AEBEFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C00FDED71F260D2500AEBEFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C00FDEDA1F260D2500AEBEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C00FDEDB1F260D2500AEBEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C00FDEDD1F260D2500AEBEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RobotPenManagerMacSDKDemo/RobotPenManagerMacSDKDemo.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DYC8577H8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
+				);
+				INFOPLIST_FILE = RobotPenManagerMacSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = MS.RobotPenManagerMacSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C00FDEDE1F260D2500AEBEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RobotPenManagerMacSDKDemo/RobotPenManagerMacSDKDemo.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DYC8577H8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
+				);
+				INFOPLIST_FILE = RobotPenManagerMacSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = MS.RobotPenManagerMacSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00FDEC31F260D2500AEBEFB /* Build configuration list for PBXProject "RobotPenManagerMacSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00FDEDA1F260D2500AEBEFB /* Debug */,
+				C00FDEDB1F260D2500AEBEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00FDEDC1F260D2500AEBEFB /* Build configuration list for PBXNativeTarget "RobotPenManagerMacSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00FDEDD1F260D2500AEBEFB /* Debug */,
+				C00FDEDE1F260D2500AEBEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C00FDEC01F260D2500AEBEFB /* Project object */;
+}
