@@ -94,7 +94,7 @@ typedef enum {
  @param Success 成功结果返回
  @param Failure 失败结果返回
  */
-+ (void)DeleteAllNoteSuccess:(void (^)(id responseObject))Success Failure:(void (^)(NSError *error))Failure;
++ (void)deleteAllSyncNoteSuccess:(void (^)(id responseObject))Success Failure:(void (^)(NSError *error))Failure;
 
 /*!
  @method 删除指定页笔记 （暂时无效）
