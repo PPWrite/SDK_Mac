@@ -8,13 +8,13 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/PPWrite/SDK_Mac"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "OneQuietCat" => "onequietcat@gmail.com" }
-  s.osx.deployment_target = "10.10"
-  s.source       = { :git => "https://github.com/PPWrite/SDK_Macac.git", :tag => "#{s.version}" }
+  # s.platform     = :osx, '10.10'
+  # s.osx.deployment_target = "10.10"
+  s.source       = { :git => "https://github.com/PPWrite/SDK_Mac.git", :tag => "#{s.version}" }
   s.requires_arc = true
+  s.vendored_frameworks =  'RobotMacPenSDK/*.framework'
+  s.libraries = 'sqlite3'
+  s.frameworks =  'ColorSync'
 
-
-  s.subspec 'RobotMacPenSDK' do |macpen|
-    macpen.vendored_frameworks =  'RobotMacPenSDK/*.framework'
-  end
 
 end
