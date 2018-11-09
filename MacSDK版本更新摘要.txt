@@ -1,7 +1,110 @@
 
+/************************************2.1.1**************************************/
+Mac SDK 2.1.1已更新
+地址：https://github.com/PPWrite/SDK_Mac
+Cocoapods支持：pod 'RobotMacPenSDK'
+版本号在RobotPenHeader头可见 或 调用getSDKVersion方法可在控制台打印。
+更新内容详情见“更新概要”
+
+更新概要：
+1、增加新固件支持。
+2、增加新的点数据结构支持。
+3、增加鼠标模式设备支持。
+
+主要涉及到的设备：
+1、新增设备：T9B_ZXB、T8B_D2。
+新增特性及方法：
+1、新增点数据结构支持，无感兼容。
+2、为支持新点数据结构的设备增加方法、状态、枚举等。
+3、新增USB下鼠标模式设备支持。
+
+RobotPenHeader.h中
+1.DeviceState增加
+/************************************点数据结构状态******************************/
+    /**点数据改变为2点结构*/
+    DEVICE_POINT_STRUCT_UPDATE_TYPE2 = 25,
+    /**点数据改变为3点结构*/
+    DEVICE_POINT_STRUCT_UPDATE_TYPE3,
+/************************************鼠标设备模式******************************/
+    /**鼠标模式获取成功*/
+    DEVICE_MOUSE_MODEL_GET_SUCCESS,
+    /**鼠标模式改变成功*/
+    DEVICE_MOUSE_MODEL_CHANGE_SUCCESS,
+2.增加PointStructType、RobotPenMouseDeviceModel枚举。
+
+RobotPenManager.h中
+#pragma mark ----------------------------------------------------PointStruct------------------------------------------------------
+/*!
+ @method
+ @abstract 自动升级为高级点模式
+ @discussion T7C_BN/T8S/J7B_ZY/T9B_ZXB使用
+ @discussion 默认为YES
+ */
+- (void)setDevicePointUpdate:(BOOL)update;
+/*!
+ @method
+ @abstract  设置点结构的类型
+ @discussion T7C-BN/T8S/J7B_ZY/T9B_ZXB使用
+ @param type 点数据结构类型
+ */
+- (void)setDevicePointStruct:(PointStructType)type;
+#pragma mark ---------------------------MouseMode--------------------------
+/*!
+ @method
+ @abstract 是否是支持鼠标模式的设备
+ @discussion MouseMode设备USB使用
+ */
+-(BOOL)getIsMouseDevice;
+/*!
+ @method
+ @abstract 获取设备当前模式
+ @discussion MouseMode设备USB使用
+ */
+- (RobotPenMouseDeviceModel)getMouseDeviceMode;
+/*!
+ @method
+ @abstract 改变设备模式
+ @discussion MouseMode设备USB使用
+ */
+- (void)changeMouseDeviceMode;
+
+RobotPenDelegate.h中
+/*!
+ @method MAC方法
+ @abstract 监听鼠标设备模式变化
+ @param model 设备模型
+ */
+- (void)getMouseDeviceModel:(RobotPenMouseDeviceModel)model;
+
+/************************************2.1.1**************************************/
+/************************************2.0.2**************************************/
+Mac SDK 2.0.2已更新
+地址：https://github.com/PPWrite/SDK_Mac
+Cocoapods支持：pod 'RobotMacPenSDK'
+版本号在RobotPenHeader头可见 或 调用getSDKVersion方法可在控制台打印。
+更新内容详情见“更新概要”
+
+更新概要：
+1、增加新固件支持。
+2、修复J7B搜索不到的BUG。
+
+主要涉及到的设备：
+1、新增设备：T7PL_CL、T9W_WX、T8B_DH2。
+2、修改bug：J7B。
+
+修复项:
+修复J7B（49）搜索不到的BUG。
+
+增加项：
+一、RobotPenHeader.h中
+1、DeviceType
+   新增设备：T7PL_CL、T9W_WX、T8B_DH2。
+
+/************************************2.0.2**************************************/
 /************************************2.0.1**************************************/
 Mac SDK 2.0.1已更新
 地址：https://github.com/PPWrite/SDK_Mac
+Cocoapods支持：pod 'RobotMacPenSDK'
 版本号在RobotPenHeader头可见 或 调用getSDKVersion方法可在控制台打印。
 更新内容详情见“更新概要”
 

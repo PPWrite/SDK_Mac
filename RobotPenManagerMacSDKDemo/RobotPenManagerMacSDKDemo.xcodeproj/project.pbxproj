@@ -426,6 +426,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MS.RobotPenManagerMacSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +450,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RobotPenManagerMacSDKDemo/RobotPenManager",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MS.RobotPenManagerMacSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

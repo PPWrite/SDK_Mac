@@ -224,6 +224,13 @@
  */
 - (void)getDeviceModel:(RobotPenDeviceModel)model;
 
+/*!
+ @method MAC方法
+ @abstract 监听鼠标设备模式变化
+ @param model 设备模型
+ */
+- (void)getMouseDeviceModel:(RobotPenMouseDeviceModel)model;
+
 @end
 
 
