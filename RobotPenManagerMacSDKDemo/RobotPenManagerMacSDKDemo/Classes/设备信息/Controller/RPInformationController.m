@@ -39,7 +39,7 @@
     //USB模式
     [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
     //蓝牙模式
-    [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
+//    [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
     //检查数据库
     [RobotSqlManager checkRobotSqlManager];
     
