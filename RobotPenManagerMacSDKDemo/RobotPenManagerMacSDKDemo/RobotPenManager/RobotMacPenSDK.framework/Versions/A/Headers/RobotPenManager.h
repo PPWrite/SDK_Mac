@@ -46,6 +46,12 @@
  @return  SDK模式
  */
 - (RobotPenMACSDKModel)getMACSDKModel;
+/*!
+ @method
+ @abstract 重置管理器
+ @discussion 卸载库时使用
+ */
+- (void)resetManager;
 #endif
 #pragma mark 实时报点类型相关
 
@@ -501,6 +507,14 @@
 
 /*!
  @method
+ @abstract 设置电磁板报点尺寸类型，非强转。
+ @discussion 默认为原始比例，暂时只用于T9W_A
+ @param type 转换类型
+ */
+- (void)setDeviceScalePointType:(RobotPaperSizeType)type;
+
+/*!
+ @method
  @abstract 以设备宽和场景宽为基础，获取原始/场景的笔迹宽度
  @param W 场景/原始的笔迹宽度
  @param width 场景/原始宽度
@@ -698,6 +712,12 @@
  @param isNew 是否是新版本
  */
 -(void)setP1Type:(BOOL)isNew;;
+
+/*!
+ @method
+ @abstract 清楚BLE的一些缓存数据
+ */
+-(void)cleanCache;
 
 @end
 
