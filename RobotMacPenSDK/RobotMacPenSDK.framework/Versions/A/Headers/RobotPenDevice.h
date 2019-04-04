@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RobotPenHeader.h"
+#import "RobotPenDeviceFunction.h"
+#import "RobotPenDeviceMacFunction.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #if TARGET_OS_IPHONE
@@ -23,6 +24,11 @@
  @brief 设备类型
  */
 @property (nonatomic, assign) DeviceType deviceType;
+/*!
+ @property
+ @brief 设备类型名称
+ */
+@property (nonatomic, copy) NSString *deviceTypeName;
 /*!
  @property
  @brief UUID
@@ -113,6 +119,19 @@
 @property (nonatomic) IOHIDDeviceRef usbDeviceRef;
 
 /*!
+ @property
+ @brief 设备功能列表
+ */
+@property (nonatomic, strong ) RobotPenDeviceFunction *function;
+/*!
+ @property
+ @brief 设备Mac功能列表
+ */
+@property (nonatomic, strong ) RobotPenDeviceMacFunction *macFunction;
+
+
+#pragma mark ---------------------------Tool --------------------------
+/*!
  @method
  @abstract 获取设备名
  @result 返回结果
@@ -130,7 +149,7 @@
  @abstract 获取笔记前缀字符串
  @result 返回结果
  */
-- (NSString *)getPrefixString;
+- (NSString *)getPrefixString DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.deviceTypeName");
 
 /*!
  @method
@@ -146,6 +165,6 @@
  @param isHorizontal 设备方向
  @result 返回结果
  */
-- (CGSize)getDeviceSizeWithIsHorizontal:(BOOL)isHorizontal;
+- (CGSize)getDeviceSizeWithIsHorizontal:(BOOL)isHorizontal DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.deviceSize");
 
 @end

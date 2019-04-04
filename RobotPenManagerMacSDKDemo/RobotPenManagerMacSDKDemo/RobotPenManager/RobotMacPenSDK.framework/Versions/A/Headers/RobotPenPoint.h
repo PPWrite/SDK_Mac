@@ -52,6 +52,17 @@
  */
 - (CGPoint)getScenePointWithSceneWidth:(float)sceneWidth SceneHeight:(float)sceneHeight IsHorizontal:(BOOL)isHorizontal;
 
+/*!
+ @method
+ @abstract 获取显示场景点坐标(以原始点为基础)
+ @param sceneWidth 场景宽
+ @param sceneHeight 场景高
+ @param isHorizontal 场景是否横屏
+ @param deviceSize 设备识别范围
+ @result 返回结果
+ */
+- (CGPoint)getScenePointWithSceneWidth:(float)sceneWidth SceneHeight:(float)sceneHeight IsHorizontal:(BOOL)isHorizontal DeviceSize:(CGSize)deviceSize;
+
 
 /*!
  @method

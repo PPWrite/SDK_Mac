@@ -165,6 +165,13 @@
  */
 - (RobotPenDevice *)getConnectDevice;
 
+/*!
+ @method
+ @abstract  设置搜索设备的名称前缀
+ @discussion 只搜索带有该前缀的设备
+ @param namePrefix 名称前缀数组
+ */
+- (void)setConnectLimitDeviceList:(NSArray *)namePrefix;
 
 /*!
  @method 是否打开实时搜索设备
@@ -373,28 +380,28 @@
  @method
  @abstract 是否是支持BLE和MCU的OTA升级
  */
-- (BOOL)getIsBLEAndMCUOTADevice;
+- (BOOL)getIsBLEAndMCUOTADevice DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.overTheAir == RobotFirmwareOTAType_OTA_ALL");
 /*!
  @method
  @abstract 是否支持获取MAC和设备名称
  */
-- (BOOL)getIsMACAndNameDevice;
+- (BOOL)getIsMACAndNameDevice DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.getMACAddress");
 /*!
  @method
  @abstract 是否支持获取模组版本
  */
-- (BOOL)getIsSensorDevice;
+- (BOOL)getIsSensorDevice DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.getSensor");
 /**
  @method
  @abstract获取是否是支持主动删除离线数据的设备
  */
--(BOOL)getIsDeleteNoteDevice;
+- (BOOL)getIsDeleteNoteDevice DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.deleteOfflineNote");
 
 /*!
  @method
  @abstract 获取模组版本信息、是否支持笔校准模式
  */
-- (void)getSensorVersion;
+- (void)getSensorVersion DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.getSensor");
 #pragma mark ---------------------------硬件版本检测相关-OEM系列---------------------------
 /*!
  @method
@@ -434,11 +441,12 @@
 
 /*!
  @method
- @abstract 设置是否获取mac 和 Sensor
+ @abstract 设置是否获取mac、Sensor和Name
  @param getMAC 布尔值
  @param getSensor 布尔值
+ @param getName 布尔值
  */
-- (void)setGetMAC:(BOOL)getMAC getSensor:(BOOL)getSensor;
+- (void)setGetMAC:(BOOL)getMAC getSensor:(BOOL)getSensor getName:(BOOL)getName;
 
 
 #pragma mark ---------------------------硬件外部升级相关---------------------------
@@ -600,7 +608,7 @@
  @abstract 是否是支持鼠标模式的设备
  @discussion MouseMode设备USB使用
  */
--(BOOL)getIsMouseDevice;
+- (BOOL)getIsMouseDevice DEPRECATED_MSG_ATTRIBUTE("Please use RobotPenDevice.function.mouseMode");
 /*!
  @method
  @abstract 获取设备当前模式
@@ -614,6 +622,21 @@
  @param model 模式
  */
 - (void)changeMouseDeviceMode:(RobotPenMouseDeviceModel)model;
+
+/*!
+ @method
+ @abstract 查询设备当前模式
+ @discussion 发送查询设备模式指令
+ */
+-(void)getUSBDeviceMode;
+
+/*!
+ @method
+ @abstract 设置设备模式切换按键是否启用
+ @discussion YES-启用，NO-禁用。
+ @param enabled 是否启用
+ */
+-(void)setDeviceModeSwipe:(BOOL)enabled;
 
 #pragma mark ---------------------------DM6--------------------------
 
@@ -639,7 +662,7 @@
  @method
  @abstract 自动升级为高级点模式
  @discussion T7C-BN/T8S/J7B_ZY/T9B_ZXB使用
- @discussion 默认为YES
+ @discussion 默认为NO
  */
 - (void)setDevicePointUpdate:(BOOL)update;
 /*!
@@ -674,6 +697,13 @@
  @param deviceType 设备类型
  */
 - (void)setConnectedDeviceType:(DeviceType)deviceType;
+/*!
+ @method
+ @abstract 获取设备尺寸
+ @param type 设备类型
+ @result 返回结果
+ */
+- (CGSize)getDeviceSizeWithDeviceType:(DeviceType)type;
 
 /*!
  @method
@@ -715,9 +745,14 @@
 
 /*!
  @method
- @abstract 清楚BLE的一些缓存数据
+ @abstract 清除BLE的一些缓存数据
  */
 -(void)cleanCache;
+/*!
+ @method
+ @abstract 开启离线笔记原始数据上报
+ */
+- (void)openSyncOriginalData:(NSString *)key;
 
 @end
 
