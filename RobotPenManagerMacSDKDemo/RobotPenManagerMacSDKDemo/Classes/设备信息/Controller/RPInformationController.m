@@ -47,9 +47,9 @@
     [[RobotPenManager sharePenManager] setPenDelegate:self];
     //SDK方法 设置报点类型，此处设置为优化点报点，需要上报优化点和转换点则必须设置
     [[RobotPenManager sharePenManager] setOrigina:NO optimize:YES transform:NO];
-    
+    CGSize size = [[RobotPenManager sharePenManager] getDeviceSizeWithDeviceType:T7];
     //SDK方法 设置场景尺寸，isOriginal = NO时必须设置,以VALUE_A4_HEIGHT和VALUE_A4_WIDTH为例，具体需要根据具体设备尺寸设置
-    [[RobotPenManager sharePenManager] setSceneSizeWithWidth:VALUE_A4_HEIGHT andHeight:VALUE_A4_WIDTH andIsHorizontal:NO];
+    [[RobotPenManager sharePenManager] setSceneSizeWithWidth:size.width andHeight:size.height andIsHorizontal:NO];
     
     //SDK方法 设置笔迹宽度，isOptimize = YES时必须设置，即显示宽度
     [[RobotPenManager sharePenManager] setStrokeWidth:1.2];
