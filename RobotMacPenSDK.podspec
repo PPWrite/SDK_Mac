@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RobotMacPenSDK"
-  s.version      = "2.2.0"
+  s.version      = "2.2.1"
   s.summary      = "A SDK for RobotMacPenServer."
   s.description  = "A SDK for RobotMacPenServer.RobotMacPenServer."
   s.homepage     = "https://github.com/PPWrite/SDK_Mac"

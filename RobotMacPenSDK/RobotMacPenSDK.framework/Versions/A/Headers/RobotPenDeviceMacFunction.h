@@ -11,8 +11,40 @@
 @interface RobotPenDeviceMacFunction : NSObject
 /*!
  @property
- @brief 支持鼠标模式（MouseMode设备USB使用）
+ @brief 支持USB设备
  */
-@property (nonatomic, assign) BOOL mouseMode;
+@property (nonatomic, assign) BOOL USBDevice;
+/*!
+ @property
+ @brief 进入USB模式的方式
+ */
+@property (nonatomic, assign) int enterUSBType;
+/*!
+ @property
+ @brief 获取信息
+ */
+@property (nonatomic, assign) BOOL getDeviceInfo;
+/*!
+ @property
+ @brief 支持鼠标模式 
+ */
+@property (nonatomic, assign) int mouseMode;
+
+/*!
+ @property
+ @brief 旧版本消息结构
+ */
+@property (nonatomic, assign) BOOL oldMessage;
+/*!
+ @property
+ @brief 同步数据结构
+ */
+@property (nonatomic, assign) int OTAStructure;
+
+/*!
+ @property
+ @brief 其他
+ */
+@property (nonatomic, assign) int other;
 
 @end
