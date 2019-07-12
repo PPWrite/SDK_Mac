@@ -1,3 +1,33 @@
+/************************************2.2.2**************************************/
+Mac SDK 2.2.2已更新
+地址：https://github.com/PPWrite/SDK_Mac
+Cocoapods支持：pod 'RobotMacPenSDK'
+版本号在RobotPenHeader头可见 或 调用getSDKVersion方法可在控制台打印。
+更新内容详情见“更新概要”
+
+特别注意：2.2.0版本及之后版本由于统一了设备识别范围的获取方式，与原宏定义的设备范围可能相反。
+当前获取到的识别范围与手写板物理范围方向一致，一般来说电磁板长边对应的范围为获取得到的CGSize.height(长边),宽度为电磁板长边对应的范围为获取得到的CGSize.width(短边)。
+2.2.0之前的版本升级时，需要注意涉及到入参为设备识别范围的方法，需要注意修改。
+
+更新概要：
+ 1、增加新固件支持。
+ 2、升级优化算法。
+ 3、模型中添加新的属性。
+ 4、优化内部逻辑。
+ 5、修复BUG。
+ 6、更新演示Demo。
+
+主要涉及到的设备：
+ 1、新增设备：T9W_H_TAL、K7W、X10、T9W_Y。
+ 2、修复优化点偶现无结束点（连笔）问题。
+ 3、修复T7E、T7PL、K8、K8_ZM设备的USB支持。
+
+一、RobotPenDeviceMacFunction.h中
+新增属性：
+ 1、消息类型 oldMessageStructure
+ 2、按键切换类型 keysMode
+
+/************************************2.2.2**************************************/
 /************************************2.2.1**************************************/
 Mac SDK 2.2.1已更新
 地址：https://github.com/PPWrite/SDK_Mac
@@ -60,7 +90,7 @@ Cocoapods支持：pod 'RobotMacPenSDK'
 Tip：取消设备范围宏定义，可通过以下方法获取。
   1.连接之前可根据设备类型调用getDeviceSizeWithDeviceType方法。
   2.连接之后通过RobotPenDevice.function.deviceSize获取。
-  以上两个方法主要区别在于。设备如果是obotPenDevice.function.getSize == YES的话1方法可能不准确。
+  以上两个方法主要区别在于。设备如果是robotPenDevice.function.getSize == YES的话1方法可能不准确。
 
 
 主要涉及到的设备：
