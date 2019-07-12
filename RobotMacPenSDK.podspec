@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
   s.source       = { :git => "https://github.com/PPWrite/SDK_Mac.git", :tag => "#{s.version}" }
   s.requires_arc = true
-  s.vendored_frameworks =  'RobotMacPenSDK/*.framework'
+  s.vendored_frameworks =  'RobotPenMacSDK/*.framework'
   s.libraries = 'sqlite3'
   s.frameworks =  'ColorSync'
 
