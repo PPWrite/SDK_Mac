@@ -19,6 +19,8 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSTextField *deviceName;              //设备名称
 @property (weak) IBOutlet NSTextField *versionLabel;            //设备版本号
+@property (weak) IBOutlet NSTextField *eventLabel;            //按键事件
+@property (weak) IBOutlet NSTextField *demoVersionLabel;       //软件版本号
 
 
 @property (weak) IBOutlet NSButton *scanButton;//搜索设备
@@ -45,6 +47,7 @@
     [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
     //遵守协议
     [[RobotPenManager sharePenManager] setPenDelegate:self];
+    _demoVersionLabel.stringValue = [NSString stringWithFormat:@"V:%@",[[RobotPenManager sharePenManager] getSDKVersion]];
 }
 
 #pragma Mark ------RobotPenDelegate--------
@@ -114,6 +117,13 @@
 -(void)getMouseDeviceModel:(RobotPenMouseDeviceModel)model
 {
     NSLog(@"当前模式 = %@",model == HandModel?@"书写模式":@"鼠标模式" );
+}
+/**
+ 设备按键事件
+ */
+- (void)getDeviceEvent:(DeviceEventType)Type
+{
+    self.eventLabel.stringValue = [NSString stringWithFormat:@"%d",Type];
 }
 #pragma mark ------PrivateMethod--------
 - (void)reloadUI
