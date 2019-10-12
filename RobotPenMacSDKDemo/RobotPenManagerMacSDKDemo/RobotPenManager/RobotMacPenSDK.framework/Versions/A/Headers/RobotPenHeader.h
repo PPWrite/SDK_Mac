@@ -329,7 +329,7 @@ typedef enum{
     /** 新建页*/
     DeviceEvent_NewPage,
     /** A*/
-    DeviceEvent_A ,
+    DeviceEvent_A = 5,
     /** B*/
     DeviceEvent_B ,
     /** C*/
@@ -339,7 +339,7 @@ typedef enum{
     /** E/UP*/
     DeviceEvent_E ,
     /** F/DOWN*/
-    DeviceEvent_F ,
+    DeviceEvent_F = 10,
     /** 上*/
     DeviceEvent_UP  ,
     /** 下*/
@@ -349,7 +349,7 @@ typedef enum{
     /** 错误*/
     DeviceEvent_WRONG ,
     /** 取消*/
-    DeviceEvent_CANCEL,
+    DeviceEvent_CANCEL = 15,
     /** 确定*/
     DeviceEvent_ENSURE,
     
@@ -361,7 +361,7 @@ typedef enum{
     /**上翻页长按*/
     DeviceEvent_FRONT_Long,
     /**下翻页单击*/
-    DeviceEvent_NEXT_Single,
+    DeviceEvent_NEXT_Single = 20,
     /**下翻页双击*/
     DeviceEvent_NEXT_Double,
     /**下翻页长按*/

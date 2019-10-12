@@ -44,7 +44,7 @@
     [super viewDidLoad];
     self.changeModalButton.usesSingleLineMode = NO;
     //SDK模式
-    [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
+    [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
     //遵守协议
     [[RobotPenManager sharePenManager] setPenDelegate:self];
     _demoVersionLabel.stringValue = [NSString stringWithFormat:@"V:%@",[[RobotPenManager sharePenManager] getSDKVersion]];
@@ -86,7 +86,7 @@
  @param device 设备
  */
 - (void)getBufferDevice:(RobotPenDevice *)device {
-    if (device.MacSign == 0) {// 拔出
+    if ([[RobotPenManager sharePenManager] getMACSDKModel] == USBModel && device.MacSign == 0) {// 拔出
         [self.dataSource removeAllObjects];
         self.connectDevice = nil;
         [self reloadUI];
