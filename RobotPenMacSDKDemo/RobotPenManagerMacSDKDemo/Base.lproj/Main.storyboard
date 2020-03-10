@@ -912,7 +912,7 @@
                                     <constraint firstAttribute="width" constant="82" id="Pva-SE-wAH"/>
                                     <constraint firstAttribute="height" constant="21" id="tVJ-4r-7Bl"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="USB模式" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Xt-5I-ZGj">
+                                <buttonCell key="cell" type="push" title="BLE模式" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Xt-5I-ZGj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>

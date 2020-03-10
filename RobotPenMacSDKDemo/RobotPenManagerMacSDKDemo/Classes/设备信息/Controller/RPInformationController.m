@@ -44,7 +44,7 @@
     [super viewDidLoad];
     self.changeModalButton.usesSingleLineMode = NO;
     //SDK模式
-    [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
+    [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
     //遵守协议
     [[RobotPenManager sharePenManager] setPenDelegate:self];
     _demoVersionLabel.stringValue = [NSString stringWithFormat:@"V:%@",[[RobotPenManager sharePenManager] getSDKVersion]];
@@ -138,6 +138,14 @@
     
     self.openPermissionsButton.hidden = !self.connectDevice.macFunction.keysMode;
     self.changeModalButton.hidden = self.connectDevice.macFunction.mouseMode != 2;
+    
+    if (!self.connectDevice) {
+        [self.openOptimizesButton setTitle:@"开启优化"];
+        [[RobotPenManager sharePenManager] setOrigina:YES optimize:NO transform:NO];
+        
+        [[RobotPenManager sharePenManager] setDeviceModeSwipe:NO];
+        [self.openPermissionsButton setTitle:@"开启切换"];
+    }
 }
 // 搜索设备
 - (IBAction)scanButtonAction:(id)sender {
@@ -152,11 +160,11 @@
 - (IBAction)sdkModalButtonAction:(id)sender {
     if ([self.sdkModalButton.title isEqualToString:@"USB模式"]) {
         [self.sdkModalButton setTitle:@"BLE模式"];
-        [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
+        [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
     }else
     {
         [self.sdkModalButton setTitle:@"USB模式"];
-        [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
+        [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
     }
 }
 // 连接/断开设备

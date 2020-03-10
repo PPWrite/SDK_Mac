@@ -1,7 +1,7 @@
 
 /*********************************************************/
 /*********************************************************/
-/*----------------------SDK 2.2.5------------------------*/
+/*----------------------SDK 2.2.6------------------------*/
 /*********************************************************/
 /*********************************************************/
 
@@ -122,6 +122,10 @@ typedef enum {
     E3W = 88,
     D7 = 89,
     T9W_H2 = 90,
+    T9W_H_FB = 91,
+    T9Y_TAL = 92,
+    T9W_ZB = 93,
+    X10_B = 94,
     
     A4 = 998,//A4占位
     A5 = 999,//A5占位
@@ -515,6 +519,27 @@ typedef enum {
     RobotPaperSizeType_A5,
     
 }RobotPaperSizeType;
+
+/*!
+ @enum
+ @abstract 点阵数据点范围尺寸
+ */
+typedef enum {
+    /** 占位 **/
+    RobotLatticeSizeType_Unavailable = 0,
+    /** 点阵自定义原始范围 **/
+    RobotLatticeSizeType_Original,
+    /** 点阵A4尺寸 **/
+    RobotLatticeSizeType_A4,
+    /** 点阵A5尺寸 **/
+    RobotLatticeSizeType_A5,
+    /** 点阵自定义范围 **/
+    RobotLatticeSizeType_Custom,
+    
+    /** 点阵罗博A5尺寸 **/
+    RobotLatticeSizeType_Robot_A5 = 10,
+    
+}RobotLatticeSizeType;
 
 /*!
  @enum

@@ -104,6 +104,11 @@
  @brief 信号强度
  */
 @property (nonatomic, assign) int RSSI;
+/*!
+ @property
+ @brief D7点阵类型
+ */
+@property (nonatomic, assign) RobotLatticeSizeType latticeSizeType;
 
 /*!
  @property 

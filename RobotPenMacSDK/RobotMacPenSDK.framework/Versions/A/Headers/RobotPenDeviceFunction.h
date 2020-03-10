@@ -140,5 +140,15 @@ typedef enum{
  @brief 点数据默认偏移
  */
 @property (nonatomic, assign) CGSize pointOffset;
+/*!
+ @property
+ @brief 是否是点阵设备
+ */
+@property (nonatomic, assign) BOOL isLatticeDevice;
+/*!
+ @property
+ @brief 附加
+ */
+@property (nonatomic, assign) int extra;
 
 @end
