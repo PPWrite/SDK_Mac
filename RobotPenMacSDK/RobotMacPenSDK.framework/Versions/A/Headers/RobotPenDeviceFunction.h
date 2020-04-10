@@ -45,6 +45,19 @@ typedef enum{
     RobotSyncHeaderType_Overlength,
 }RobotSyncHeaderType;
 
+/**
+ @enum
+ @abstract 页码识别类型
+ */
+typedef enum {
+    /** 不支持*/
+    PageIdentificationDeviceType_none = 0,
+    /** 普通的页码识别*/
+    PageIdentificationDeviceType_common,
+    /** 通过点阵进行页码识别*/
+    PageIdentificationDeviceType_lattice,
+} PageIdentificationDeviceType;
+
 @interface RobotPenDeviceFunction : NSObject
 
 /*!
@@ -110,7 +123,7 @@ typedef enum{
  @property
  @brief 支持页码识别
  */
-@property (nonatomic, assign) BOOL pageIdentificationDevice;
+@property (nonatomic, assign) PageIdentificationDeviceType pageIdentificationDevice;
 /*!
  @property
  @brief 被限制的设备

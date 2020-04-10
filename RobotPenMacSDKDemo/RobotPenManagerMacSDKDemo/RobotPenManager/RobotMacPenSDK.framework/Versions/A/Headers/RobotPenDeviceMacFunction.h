@@ -31,6 +31,11 @@
 @property (nonatomic, assign) int mouseMode;
 /*!
  @property
+ @brief 使用新的获取当前模式的命令
+ */
+@property (nonatomic, assign) BOOL newGetModeCommand;
+/*!
+ @property
  @brief 支持按键切换模式
  */
 @property (nonatomic, assign) BOOL keysMode;
