@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <RobotMacPenSDK/RobotPenDevice.h>
+#import <RobotPenMac/RobotPenMac.h>
 //#import "RobotPenDevice.h"
 
 @interface RPTableCell : NSTableCellView

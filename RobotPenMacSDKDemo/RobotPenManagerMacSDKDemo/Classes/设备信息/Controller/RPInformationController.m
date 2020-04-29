@@ -9,7 +9,7 @@
 #import "RPInformationController.h"
 #import "RPTableCell.h"
 #import "WhiteBoardController.h"
-#import <RobotMacPenSDK/RobotPenManager.h>
+#import <RobotPenMac/RobotPenMac.h>
 //#import "RobotPenManager.h"
 @interface RPInformationController ()<RobotPenDelegate,NSTableViewDelegate,NSTableViewDataSource,NSAlertDelegate>
 @property (strong , nonatomic) NSMutableArray *dataSource;      //设备数据源
@@ -73,6 +73,9 @@
         {
             self.connectDevice = [[RobotPenManager sharePenManager] getConnectDevice];
             [self reloadUI];
+            if (self.connectDevice.deviceType == C7) {
+                [[RobotPenManager sharePenManager] OpenReportedData];
+            }
         }
             break;
             case DEVICE_UPDATE:
@@ -161,10 +164,11 @@
     if ([self.sdkModalButton.title isEqualToString:@"USB模式"]) {
         [self.sdkModalButton setTitle:@"BLE模式"];
         [[RobotPenManager sharePenManager] setMACSDKModel:USBModel];
-    }else
-    {
+        [[RobotPenManager sharePenManager] setPenDelegate:self];
+    } else {
         [self.sdkModalButton setTitle:@"USB模式"];
         [[RobotPenManager sharePenManager] setMACSDKModel:BLEModel];
+        [[RobotPenManager sharePenManager] setPenDelegate:self];
     }
 }
 // 连接/断开设备

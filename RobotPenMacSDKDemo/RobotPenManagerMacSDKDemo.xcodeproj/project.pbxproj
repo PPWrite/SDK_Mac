@@ -13,13 +13,13 @@
 		7D54F2491F56AB0600DE6FCC /* DrawBoradView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D54F2481F56AB0600DE6FCC /* DrawBoradView.m */; };
 		7DD4009E1F581F93009E1526 /* WhiteBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD4009C1F581F93009E1526 /* WhiteBoardController.m */; };
 		7DD4009F1F581F93009E1526 /* WhiteBoardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD4009D1F581F93009E1526 /* WhiteBoardController.xib */; };
+		8BF01BBC24591C5900A406D4 /* RobotPenMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF01BBB24591C5900A406D4 /* RobotPenMac.framework */; };
 		C008639522AB9339008FFA13 /* RPTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C008639422AB9339008FFA13 /* RPTableCell.m */; };
 		C00FDECD1F260D2500AEBEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FDECC1F260D2500AEBEFB /* AppDelegate.m */; };
 		C00FDED01F260D2500AEBEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FDECF1F260D2500AEBEFB /* main.m */; };
 		C00FDED51F260D2500AEBEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00FDED41F260D2500AEBEFB /* Assets.xcassets */; };
 		C00FDED81F260D2500AEBEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00FDED61F260D2500AEBEFB /* Main.storyboard */; };
 		C09116F61F55090100710320 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09116F51F55090100710320 /* libsqlite3.0.tbd */; };
-		C09E0DDF22CF57830030FA74 /* RobotMacPenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09E0DDE22CF57830030FA74 /* RobotMacPenSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +34,7 @@
 		7DD4009B1F581F93009E1526 /* WhiteBoardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteBoardController.h; sourceTree = "<group>"; };
 		7DD4009C1F581F93009E1526 /* WhiteBoardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteBoardController.m; sourceTree = "<group>"; };
 		7DD4009D1F581F93009E1526 /* WhiteBoardController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteBoardController.xib; sourceTree = "<group>"; };
+		8BF01BBB24591C5900A406D4 /* RobotPenMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RobotPenMac.framework; sourceTree = "<group>"; };
 		C008639322AB9339008FFA13 /* RPTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPTableCell.h; sourceTree = "<group>"; };
 		C008639422AB9339008FFA13 /* RPTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPTableCell.m; sourceTree = "<group>"; };
 		C00FDEC81F260D2500AEBEFB /* RobotPenManagerMacSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotPenManagerMacSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +45,6 @@
 		C00FDED71F260D2500AEBEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C00FDED91F260D2500AEBEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C09116F51F55090100710320 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		C09E0DDE22CF57830030FA74 /* RobotMacPenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RobotMacPenSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C09E0DDF22CF57830030FA74 /* RobotMacPenSDK.framework in Frameworks */,
 				C09116F61F55090100710320 /* libsqlite3.0.tbd in Frameworks */,
+				8BF01BBC24591C5900A406D4 /* RobotPenMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +187,7 @@
 		C0BD939522C5FE09007DED02 /* RobotPenManager */ = {
 			isa = PBXGroup;
 			children = (
-				C09E0DDE22CF57830030FA74 /* RobotMacPenSDK.framework */,
+				8BF01BBB24591C5900A406D4 /* RobotPenMac.framework */,
 			);
 			path = RobotPenManager;
 			sourceTree = "<group>";

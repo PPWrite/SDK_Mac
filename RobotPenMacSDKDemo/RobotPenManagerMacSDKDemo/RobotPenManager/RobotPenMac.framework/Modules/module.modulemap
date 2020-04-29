@@ -1,0 +1,6 @@
+framework module RobotPenMac {
+  umbrella header "RobotPenMac.h"
+
+  export *
+  module * { export * }
+}

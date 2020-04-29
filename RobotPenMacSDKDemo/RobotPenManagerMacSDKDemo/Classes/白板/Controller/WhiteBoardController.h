@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <RobotMacPenSDK/RobotPenManager.h>
+#import <RobotPenMac/RobotPenMac.h>
 //#import "RobotPenManager.h"
 @interface WhiteBoardController : NSWindowController
 - (void)whiteBoardDrawWithPoint:(RobotPenPoint *)point;
