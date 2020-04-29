@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.name         = "RobotPenMacSDK"
   s.version      = "2.2.10"
   s.summary      = "A SDK for RobotPenMac."
-  s.description  = "A SDK for RobotPenMac."
+  s.description  = "A SDK for RobotPenMac. Think Use."
   s.homepage     = "https://github.com/PPWrite/SDK_Mac"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "OneQuietCat" => "onequietcat@gmail.com" }
