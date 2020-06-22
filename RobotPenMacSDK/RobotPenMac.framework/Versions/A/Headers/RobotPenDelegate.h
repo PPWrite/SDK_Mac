@@ -19,11 +19,12 @@
  @abstract 代理
  @discussion RobotPenManager 代理
  */
-@protocol RobotPenDelegate <NSObject>
+@protocol RobotPenDelegate<NSObject>
 
 @optional
 
 #pragma mark 设备监听
+
 /*!
  @method
  @abstract 发现电磁板设备
@@ -120,13 +121,13 @@
  @abstract 获取点读码数据
  @discussion 点读码专用
  @param bookID 点读数据
-*/
+ */
 - (void)getBookID:(int)bookID;
 
 /*!
  @method
  @abstract 获取设备笔记和页码编号
- @discussion 页码识别设备专用
+ @discussion 页码识别设备专用。在x10-b设备上，如果 page == -1，代表纸被拿出。
  @param page 页码编号
  @param NoteId 笔记编号
  */
@@ -135,7 +136,7 @@
 /*!
  @method
  @abstract 回调纸张偏移，仅仅部分设备支持
- @discussion 页码识别设备专用
+ @discussion x10-b设备使用
  @param ofsset 纸张偏移
  @param angle 纸张旋转角度，大于0为顺时针旋转
  */
@@ -148,6 +149,14 @@
  @param NotePage 笔记页码编号
  */
 - (void)getDevicePageNoteIdNumber:(int)NotePage;
+
+/*!
+@method
+@abstract 收到硬件的最原始的点数据
+@discussion 当使用openReportPrimitivePointData开启时，才会执行此回调
+@param point 坐标点
+*/
+- (void)robotPenReceivedDevicePrimitivePoint:(RobotDeviceOriginPoint)point;
 
 #pragma mark 离线笔记监听
 
@@ -179,24 +188,24 @@
  @param curlength 已同步大小
  @param progess 进度
  */
-- (void)getSyncDataLength:(int )length andCurDataLength:(int)curlength andProgress:(float)progess;
-
-/*!
- @method 监听笔记数量和电量信息(以后会弃用，请及时更新)
- @abstract  监听笔记数量和电量信息
- @param num 数量
- @param battery 电量
- */
-- (void)getStorageNum:(int)num andBattery:(int)battery DEPRECATED_MSG_ATTRIBUTE("Please use - (void)getStorageNum:(int)num andBattery:(int)battery andNotePercent:(int)percent");
+- (void)getSyncDataLength:(int)length andCurDataLength:(int)curlength andProgress:(float)progess;
 
 /*!
  @method 监听笔记数量和电量信息
- @abstract  监听笔记数量和电量信息
- @param num 数量
+ @abstract 监听笔记数量和电量信息
+ @param num 笔迹数量
  @param battery 电量
  @param percent 存储条数百分比
  */
 - (void)getStorageNum:(int)num andBattery:(int)battery andNotePercent:(int)percent;
+
+/*!
+ @method
+ @abstract 设备主动上报状态、电量
+ @param status 设备状态
+ @param battery 电量
+ */
+- (void)robotPenDeviceReportStatus:(RobotPenDeviceStatus)status battery:(int)battery;
 
 /*!
  @method
@@ -231,6 +240,7 @@
 - (void)OTAUpdateProgress:(float)progess;
 
 #pragma mark 模组监听
+
 /*!
  @method
  @abstract SENSOR升级State

@@ -13,56 +13,56 @@
  @property
  @brief 支持USB设备
  */
-@property (nonatomic, assign) BOOL USBDevice;
+@property(nonatomic, assign) BOOL USBDevice;
 /*!
  @property
  @brief 进入USB模式的方式
  */
-@property (nonatomic, assign) int enterUSBType;
+@property(nonatomic, assign) int enterUSBType;
 /*!
  @property
  @brief 获取信息
  */
-@property (nonatomic, assign) BOOL getDeviceInfo;
+@property(nonatomic, assign) BOOL getDeviceInfo;
 /*!
  @property
  @brief 支持鼠标模式 
  */
-@property (nonatomic, assign) int mouseMode;
+@property(nonatomic, assign) int mouseMode;
 /*!
  @property
  @brief 使用新的获取当前模式的命令
  */
-@property (nonatomic, assign) BOOL newGetModeCommand;
+@property(nonatomic, assign) BOOL newGetModeCommand;
 /*!
  @property
  @brief 支持按键切换模式
  */
-@property (nonatomic, assign) BOOL keysMode;
+@property(nonatomic, assign) BOOL keysMode;
 /*!
  @property
  @brief 旧版本信息结构
  */
-@property (nonatomic, assign) BOOL oldInformationStructure;
+@property(nonatomic, assign) BOOL oldInformationStructure;
 /*!
  @property
  @brief 旧版本消息结构
  */
-@property (nonatomic, assign) BOOL oldMessageStructure;
+@property(nonatomic, assign) BOOL oldMessageStructure;
 /*!
  @property
  @brief 同步数据结构
  */
-@property (nonatomic, assign) int OTAStructure;
+@property(nonatomic, assign) int OTAStructure;
 /*!
  @property
  @brief 获取模组信息
  */
-@property (nonatomic, assign) BOOL getModuleVersion;
+@property(nonatomic, assign) BOOL getModuleVersion;
 /*!
  @property
  @brief 其他
  */
-@property (nonatomic, assign) int other;
+@property(nonatomic, assign) int other;
 
 @end

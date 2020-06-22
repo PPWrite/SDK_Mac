@@ -1,7 +1,7 @@
 
 /*********************************************************/
 /*********************************************************/
-/*----------------------SDK 2.2.10------------------------*/
+/*----------------------SDK 2.2.11------------------------*/
 /*********************************************************/
 /*********************************************************/
 
@@ -32,11 +32,11 @@
  */
 typedef enum {
     UnKnown = 0,
-    P7  = 1,
+    P7 = 1,
     T7 = 2,
     T7P = 3,
     P1 = 4,
-    T7P_New  =5,
+    T7P_New = 5,
     T8A = 6,
     T7_XY = 7,
     J0_A5 = 8,
@@ -53,7 +53,7 @@ typedef enum {
     J0_A4_P = 19,
     T9E = 20,
     J0_T9 = 21,
-    T7_CY =22,
+    T7_CY = 22,
     D1_CY = 23,
     C7 = 24,
     W7 = 25,
@@ -127,7 +127,8 @@ typedef enum {
     T9W_ZB = 93,
     X10_B = 94,
     J7M = 95,
-    
+    T8Y = 96,
+
     A4 = 998,//A4占位
     A5 = 999,//A5占位
 } DeviceType;
@@ -139,7 +140,7 @@ typedef enum {
 typedef enum {
     /************************************设备基础状态******************************/
     /**未知错误*/
-    DEVICE_UNKNOW = 0 ,
+    DEVICE_UNKNOW = 0,
     /**正在连接*/
     DEVICE_CONNECTING,
     /**连接成功*/
@@ -255,8 +256,8 @@ typedef enum {
     DEVICE_MOUSE_MODEL_GET_SUCCESS,
     /**鼠标模式改变成功*/
     DEVICE_MOUSE_MODEL_CHANGE_SUCCESS,
-    
-}DeviceState;
+
+} DeviceState;
 
 /*!
  @enum
@@ -281,7 +282,7 @@ typedef enum {
     RobotPenPointAssistTouchEnd,
     /** 红笔悬浮状态 **/
     RobotPenPointAssistFloat,
-    
+
     /** 橡皮擦touchBegin状态**/
     RobotPenPointRubberBegin = 9,
     /** 橡皮擦touchMove状态**/
@@ -290,8 +291,8 @@ typedef enum {
     RobotPenPointRubberEnd,
     /** 橡皮擦悬浮状态 **/
     RobotPenPointRubberFloat
-    
-}RobotPenPointTouchStatus;
+
+} RobotPenPointTouchStatus;
 
 /*!
  @enum
@@ -318,49 +319,49 @@ typedef enum {
     SYNC_PASSWORD_FAIL,
     /** 笔记同步密码尚未启用*/
     SYNC_PASSWORD_NULL,
-    
-}SYNCState;
+
+} SYNCState;
 
 /*!
  @enum
  @abstract 点击事件状态
  */
-typedef enum{
+typedef enum {
     /** 单击*/
     DeviceEvent_CLick = 0,
     /** 双击*/
-    DeviceEvent_Double_CLick ,
+    DeviceEvent_Double_CLick,
     /** 向前*/
-    DeviceEvent_Front ,
+    DeviceEvent_Front,
     /** 向后*/
-    DeviceEvent_Next ,
+    DeviceEvent_Next,
     /** 新建页*/
     DeviceEvent_NewPage,
     /** A*/
     DeviceEvent_A = 5,
     /** B*/
-    DeviceEvent_B ,
+    DeviceEvent_B,
     /** C*/
-    DeviceEvent_C ,
+    DeviceEvent_C,
     /** D*/
-    DeviceEvent_D ,
+    DeviceEvent_D,
     /** E/UP*/
-    DeviceEvent_E ,
+    DeviceEvent_E,
     /** F/DOWN*/
     DeviceEvent_F = 10,
     /** 上*/
-    DeviceEvent_UP  ,
+    DeviceEvent_UP,
     /** 下*/
-    DeviceEvent_DOWN ,
+    DeviceEvent_DOWN,
     /** 正确*/
-    DeviceEvent_TRUE ,
+    DeviceEvent_TRUE,
     /** 错误*/
-    DeviceEvent_WRONG ,
+    DeviceEvent_WRONG,
     /** 取消*/
     DeviceEvent_CANCEL = 15,
     /** 确定*/
     DeviceEvent_ENSURE,
-    
+
     /**J7B-HF事件*/
     /**上翻页单击*/
     DeviceEvent_FRONT_Single,
@@ -374,13 +375,13 @@ typedef enum{
     DeviceEvent_NEXT_Double,
     /**下翻页长按*/
     DeviceEvent_NEXT_Long,
-}DeviceEventType;
+} DeviceEventType;
 
 /*!
  @enum
  @abstract 系统状态
  */
-typedef enum{
+typedef enum {
     /** 未知设备*/
     OSDeviceState_BLE_Unknown = 0,
     /** 蓝牙已重启*/
@@ -395,11 +396,11 @@ typedef enum{
     OSDeviceState_BLE_PoweredOn,
     //MAC方法
     /** USB打开成功*/
-    OSDeviceState_USB_SUCCESS  = 6,
+    OSDeviceState_USB_SUCCESS = 6,
     /** USB打开失败*/
     OSDeviceState_USB_Error,
-    
-}OSDeviceStateType;
+
+} OSDeviceStateType;
 
 
 /*!
@@ -421,8 +422,8 @@ typedef enum {
     OTA_STATUS_ERROR,
     /** 版本错误*/
     OTA_VERSION_ERROR,
-    
-}OTAState;
+
+} OTAState;
 
 /*!
  @enum
@@ -439,14 +440,14 @@ typedef enum {
     SENSOR_SUCCESS,
     /** 模组升级失败*/
     SENSOR_FAIL,
-    
-}SensorState;
+
+} SensorState;
 
 /*!
  @enum
  @abstract 线程设置
  */
-typedef enum{
+typedef enum {
     /** 默认主线程*/
     BLEQueueType_Main = 0,
     /** 全局高优先级队列*/
@@ -459,8 +460,8 @@ typedef enum{
     BLEQueueType_Background,
     /** 自定义队列*/
     BLEQueueType_User,
-    
-}BLEQueueType;
+
+} BLEQueueType;
 
 /*!
  @enum
@@ -485,8 +486,8 @@ typedef enum {
     Battery_Charge,
     /**充电完成*/
     Battery_Charged,
-    
-}PercentageBattery;
+
+} PercentageBattery;
 
 
 /*!
@@ -504,8 +505,8 @@ typedef enum {
     RobotPenCoordinateUpperRight,
     /** 右下角为坐标原点 **/
     RobotPenCoordinateLowerRight,
-    
-}RobotPenCoordinateSystem;
+
+} RobotPenCoordinateSystem;
 
 /*!
  @enum
@@ -518,8 +519,8 @@ typedef enum {
     RobotPaperSizeType_A4,
     /** 标准A5尺寸 **/
     RobotPaperSizeType_A5,
-    
-}RobotPaperSizeType;
+
+} RobotPaperSizeType;
 
 /*!
  @enum
@@ -536,13 +537,13 @@ typedef enum {
     RobotLatticeSizeType_A5,
     /** 点阵自定义范围 **/
     RobotLatticeSizeType_Custom,
-    
+
     /** 点阵罗博A5尺寸 **/
     RobotLatticeSizeType_Robot_A5 = 10,
     /** 点阵X10范围 **/
     RobotLatticeSizeType_X10,
-    
-}RobotLatticeSizeType;
+
+} RobotLatticeSizeType;
 
 /*!
  @enum
@@ -555,8 +556,8 @@ typedef enum {
     CleanDataAndCleanNote,
     /** 擦除数据并新建离线笔记 **/
     CleanDataAndBuildNote,
-    
-}CleanDataType;
+
+} CleanDataType;
 
 /*!
  @enum
@@ -567,7 +568,7 @@ typedef enum {
     PointStructType2 = 0,
     /** 3点结构 **/
     PointStructType3,
-}PointStructType;
+} PointStructType;
 
 /*!
  @enum
@@ -579,8 +580,8 @@ typedef enum {
     BLEModel = 0,
     /** USB模式 **/
     USBModel,
-    
-}RobotPenMACSDKModel;
+
+} RobotPenMACSDKModel;
 
 /*!
  @enum
@@ -594,8 +595,8 @@ typedef enum {
     Device_24GModel,
     /** USB模式 **/
     Device_USBModel,
-    
-}RobotPenDeviceModel;
+
+} RobotPenDeviceModel;
 
 /*!
  @enum
@@ -607,8 +608,8 @@ typedef enum {
     MouseModel = 0,
     /** 书写模式 **/
     HandModel,
-    
-}RobotPenMouseDeviceModel;
+
+} RobotPenMouseDeviceModel;
 
 /*!
  @enum
@@ -623,6 +624,39 @@ typedef enum {
     /** 自定义纸张，自定义纸张起始位置和纸张宽度 */
     RobotLatticePaperType_Custom,
 } RobotLatticePaperType;
+
+typedef enum {
+    ROBOT_PEN_STUTAS_DEVICE_POWER_OFF = 0,
+    ROBOT_PEN_STUTAS_DEVICE_STANDBY,
+    ROBOT_PEN_STUTAS_DEVICE_INIT_BTN,
+    ROBOT_PEN_STUTAS_DEVICE_OFFLINE,
+    ROBOT_PEN_STUTAS_DEVICE_ACTIVE,
+    ROBOT_PEN_STUTAS_DEVICE_LOW_POWER_ACTIVE,
+    ROBOT_PEN_STUTAS_DEVICE_OTA_MODE,
+    ROBOT_PEN_STUTAS_DEVICE_OTA_WAIT_SWITCH,
+    ROBOT_PEN_STUTAS_DEVICE_TRYING_POWER_OFF,
+    ROBOT_PEN_STUTAS_DEVICE_NRF_TEST,
+    ROBOT_PEN_STUTAS_DEVICE_SYNC_MODE,
+    ROBOT_PEN_STUTAS_DEVICE_DFU_MODE,
+    ROBOT_PEN_STUTAS_SENSOR_UPDATE,
+    ROBOT_PEN_STUTAS_SENSOR_CALIBRA
+} RobotPenDeviceStatus;
+
+
+/**
+ 硬件设备原始坐标点结构体
+*/
+typedef struct rbt_device_origin_point {
+    int x; ///< x
+    int y; ///< y
+    short p; ///< 压力，0 ～ 1024
+    unsigned char s; ///< 状态，0x00离开、0x10悬浮、0x11按下、0x20红笔悬浮、0x21红笔按下、0x30橡皮悬浮、0x31橡皮按下
+    int isLattice; ///< 点是点阵码，0 不是
+    int time; ///< 时间戳，点阵设备专属
+    short angle; ///< 点角度，点阵设备专属
+    int sizeType; ///< 点所属的纸张类型(RobotLatticeSizeType)，点阵设备专属
+} RobotDeviceOriginPoint;
+
 
 #endif /* RobotPenHeader_h */
 
